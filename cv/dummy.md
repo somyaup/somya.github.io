@@ -1,6 +1,6 @@
 
 ## **Somya Upadhyay**
-[Phone Number](tel:8210859537) | [LinkedIn Profile](https://www.linkedin.com/in/somya-upadhyay) | [Email Address](mailto:somyaupadyay@gmail.com) | [Website](https://somyaup.github.io/somya.github.io/site.html)
+[Phone Number: 8210859537](tel:8210859537) | [LinkedIn Profile](https://www.linkedin.com/in/somya-upadhyay) | [Email Address](mailto:somyaupadyay@gmail.com) | [Website](https://somyaup.github.io/somya.github.io/site.html)
 
 ### **Objective:**
 Highly skilled ML Scientist with Customer Engagement and commerce products expertise. Seeking a challenging Data Scientist position in India to leverage NLP and ANN projects, technical leadership skills, and passion for data-driven insights.
