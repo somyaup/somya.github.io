@@ -1,76 +1,416 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-	<title>Home</title>
-	<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience | Somya Upadhyay</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f172a, #1e293b, #334155);
+            color:white;
+            min-height:100vh;
+            display:flex;
+            flex-direction:column;
+        }
+
+        header{
+            padding:20px 8%;
+        }
+
+        nav ul{
+            display:flex;
+            justify-content:flex-end;
+            gap:30px;
+            list-style:none;
+            flex-wrap:wrap;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            transition:0.3s ease;
+            opacity:0.85;
+        }
+
+        nav a:hover{
+            color:#38bdf8;
+            opacity:1;
+        }
+
+        .active{
+            color:#38bdf8;
+            font-weight:600;
+        }
+
+        main{
+            flex:1;
+            padding:50px 8%;
+        }
+
+        h1{
+            font-size:clamp(2.8rem, 5vw, 4.5rem);
+            margin-bottom:10px;
+        }
+
+        .subtitle{
+            color:#cbd5e1;
+            font-size:1.2rem;
+            margin-bottom:50px;
+        }
+
+        .experience-container{
+            display:flex;
+            flex-direction:column;
+            gap:30px;
+        }
+
+        .experience-card{
+            display:flex;
+            gap:25px;
+            align-items:flex-start;
+            background:rgba(255,255,255,0.05);
+            border:1px solid rgba(255,255,255,0.08);
+            border-radius:20px;
+            padding:32px;
+            transition:0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .experience-card:hover{
+            transform:translateY(-4px);
+            border-color:#38bdf8;
+        }
+
+        .logo{
+            width:85px;
+            height:85px;
+            object-fit:contain;
+            background:white;
+            border-radius:14px;
+            padding:8px;
+            flex-shrink:0;
+        }
+
+        .content{
+            flex:1;
+        }
+
+        .role{
+            font-size:1.4rem;
+            font-weight:700;
+            color:#38bdf8;
+            margin-bottom:8px;
+        }
+
+        .company{
+            font-size:1rem;
+            color:#e2e8f0;
+            margin-bottom:18px;
+        }
+
+        .description{
+            color:#cbd5e1;
+            line-height:1.8;
+        }
+
+        .description ul{
+            margin-top:12px;
+            padding-left:22px;
+        }
+
+        .description li{
+            margin-bottom:10px;
+        }
+
+        footer{
+            text-align:center;
+            padding:20px;
+            color:#cbd5e1;
+            font-size:0.9rem;
+        }
+
+        @media(max-width:768px){
+
+            nav ul{
+                justify-content:center;
+                gap:18px;
+            }
+
+            .experience-card{
+                flex-direction:column;
+                padding:24px;
+            }
+
+            .logo{
+                width:70px;
+                height:70px;
+            }
+        }
+
+    </style>
 </head>
-<text>
-	<header>
-		<nav>
-			<ul>
-				<li><a style="color:gray;" href="../site.html">Back</a></li>
-				<li><a href="about.html">Education</a></li>
-				<li><a href="skills.html">Skills</a></li>
-				<li><a href="contact.html">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
-	<main>
-		<h1 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;color:white;font-size:3vw;" >Somy Upadhyay</h1>
-        <body style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;color:white;font-size:1vw;">
-<p style="font-size: 2vw;"><b> EXPERIENCE </b></p>
-<p> ________________________________________________________________________</p>
-<p><b>Technical Lead - ML Scientist | HCL Technologies | August 2022 - Present</b></p>
-<p>Spearhead the integration of ML capabilities into Unica and commerce products, </p>
-<p>driving enhancements in email engagement prediction and NLP search optimization.</p>
-<p>Collaborate with a team of 14 members, guiding technical decisions and providing </p>
-<p>mentorship to junior colleagues.Apply Python and advanced ML techniques to design </p>
-<p>and implement solutions for prompt correction and optimization of search algorithms.</p>
-<p>Employ an agile approach, ensuring  ensuring efficient development and timely delivery of projects.</p>
-<p>Develop and maintain robust data pipelines, ensuring data quality and accuracy for modeling and analysis.</p>
-<p>Communicate findings and insights to stakeholders through compelling data visualizations and presentations.</p>
-<p>Continuously stay updated with the latest advancements in ML and data science through self-learning and attending industry conferences.</p>
-		<p> ________________________________________________________________________</p>
-<p><b>Neural Network Projects | Birla Institute of Technology and Science, Pilani| 2019-2021</b></p>
-<p>Implemented neural network architectures to solve complex problems, showcasing expertise in algorithm design, </p>
-<p>feature engineering, and model evaluation. Collaborated with a team of two  to develop and train neural networks </p>
-<p>for tasks such as image classification and natural language processing.Conducted thorough experimentation, </p>
-<p>fine-tuning hyperparameters, and evaluating model performance to achieve optimal results.</p>
-<p>Presented project findings to a panel of faculty members, demonstrating strong communication and presentation skills.</p>
-<!-- <p><b>HCL Software, Bangalore </b></p> -->
-<!-- <p><b>Technical Lead </b> (July 2022 - Current) </p>
-<ul style="list-style-type:circle;">
-    <li>Joined the X.AI team where I took AI use case from POC to development to deployment. </li>
-    <li>Modelled a solution to visualise engagement for HCL client businesses.</li>
-    <li>Increased Engagement through various channels using AI based predictive scoring.</li>
-</ul> -->
-		<p> ________________________________________________________________________</p>
-<p><b>MySmartPrice.com ,Bangalore</b></p>
-<p><b>Backend developer </b> (July 2021-Dec 2021) </p>
-<ul style="list-style-type:circle;">
-    <li>Worked for an e-commerce SAAS product to maintain client consumer engagement. </li>
-    <li>Managed relational database and AWS cloud services to launch and test APIs. </li>
-    <li>Added functionalities for messaging and notification workflows for differentiated plans.</li> 
-</ul>
-<p><b>Tata Steel ,Jamshedpur </b></p>
-<p><b>Vacation Trainee </b> (April 2020-May 2020) </p>
-<ul style="list-style-type:circle;">
-    <li>Got certified Machine Learning Training with tests from Capability development. </li>
-    <li>Reduced cost by 9% in Desulphonation process by designing optimised Regression model using Machine learning. </li>
-    <li>(https://github.com/somyaup/Desulphurisation) </li>
-</ul>
-<p><b>Indian Red Cross Society, Chennai </b>
-<p><b>IT intern </b>  (May 2019-July 2019) </p>
-<ul style="list-style-type:circle;">
-    <li>Improved Disaster Management Team’s reach by designing an app.</li>
-    <li>App notifies volunteers during disasters when triggered by IRS officials with a message.</li>
-    <li>Added SMS posting feature for Team members to reach 500 volunteers in a single click.</li>
-</ul>
-<p> ________________________________________________________________________</p>
-</text>
-</main>
-	<footer>
-		<p>Copyright &copy; 2023</p>
-	</footer>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a class="active" href="index.html">Experience</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <h1>Experience</h1>
+
+        <p class="subtitle">
+            AI, Product Strategy, Business Consulting, and Technology Leadership
+        </p>
+
+        <div class="experience-container">
+
+            <!-- VECTOR -->
+
+            <div class="experience-card">
+
+                <img src="vector.png" alt="Vector Consulting Logo" class="logo">
+
+                <div class="content">
+
+                    <p class="role">
+                        Business Consultant
+                    </p>
+
+                    <p class="company">
+                        Vector Consulting Group | Apr 2026 – Present
+                    </p>
+
+                    <div class="description">
+
+                        Working on strategic and operational consulting engagements focused on
+                        business transformation, process improvement, and execution excellence.
+
+                        <ul>
+                            <li>Support client problem solving through structured analysis and cross-functional coordination.</li>
+
+                            <li>Bridge technology, operations, and business strategy to drive scalable solutions.</li>
+
+                            <li>Contribute to consulting frameworks, stakeholder communication, and implementation planning.</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- L&T -->
+
+            <div class="experience-card">
+
+                <img src="lnt.png" alt="L&T Logo" class="logo">
+
+                <div class="content">
+
+                    <p class="role">
+                        Summer Internship – Product Strategy & AI
+                    </p>
+
+                    <p class="company">
+                        Larsen & Toubro (L&T) | Apr 2025 – Jun 2025
+                    </p>
+
+                    <div class="description">
+
+                        Worked on Chanakya UAV AI software standardisation and go-to-market strategy
+                        for defence AI applications.
+
+                        <ul>
+
+                            <li>Spearheaded a 3-phase product roadmap for UAV AI platforms targeting an estimated $80M SOM opportunity.</li>
+
+                            <li>Integrated Edge AI, YOLOv9, and SLAM concepts into a modular platform architecture to improve autonomy and mission readiness.</li>
+
+                            <li>Developed adoption S-curves and milestone-based investment roadmaps for leadership decision-making.</li>
+
+                            <li>Segmented the $24.4B drone software market across Asia-Pacific and Middle East regions.</li>
+
+                            <li>Designed a royalty-based SaaS GTM strategy through LTTS partnership to reduce regulatory and market-entry friction.</li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- HCL -->
+
+            <div class="experience-card">
+
+                <img src="hcl.png" alt="HCL Logo" class="logo">
+
+                <div class="content">
+
+                    <p class="role">
+                        Technical Lead – AI / ML
+                    </p>
+
+                    <p class="company">
+                        HCL Technologies / HCL Software | Aug 2022 – Jul 2024
+                    </p>
+
+                    <div class="description">
+
+                        Led enterprise AI initiatives involving predictive analytics,
+                        search optimization, recommendation systems, and Generative AI applications.
+
+                        <ul>
+
+                            <li>Developed ML solutions for engagement prediction and intelligent search optimization.</li>
+
+                            <li>Built scalable AI applications using Python, TensorFlow, FastAPI, Kubernetes, and cloud platforms.</li>
+
+                            <li>Collaborated across engineering, product, and business teams to drive solution delivery.</li>
+
+                            <li>Mentored junior developers and contributed to technical architecture and project execution.</li>
+
+                            <li>Managed data pipelines and analytics workflows for production-grade ML systems.</li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- MySmartPrice -->
+
+            <div class="experience-card">
+
+                <img src="msp.png" alt="MySmartPrice Logo" class="logo">
+
+                <div class="content">
+
+                    <p class="role">
+                        Backend Developer Intern
+                    </p>
+
+                    <p class="company">
+                        MySmartPrice.com | Jul 2021 – Dec 2021
+                    </p>
+
+                    <div class="description">
+
+                        <ul>
+
+                            <li>Worked on backend systems for an e-commerce SaaS platform focused on customer engagement.</li>
+
+                            <li>Managed APIs, relational databases, and AWS cloud infrastructure.</li>
+
+                            <li>Implemented messaging and notification workflows for differentiated customer plans.</li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Tata Steel -->
+
+            <div class="experience-card">
+
+                <img src="tata.png" alt="Tata Steel Logo" class="logo">
+
+                <div class="content">
+
+                    <p class="role">
+                        Machine Learning Trainee
+                    </p>
+
+                    <p class="company">
+                        Tata Steel | Apr 2020 – May 2020
+                    </p>
+
+                    <div class="description">
+
+                        <ul>
+
+                            <li>Built an ML-based regression model for desulphurisation process optimization.</li>
+
+                            <li>Achieved an estimated 9% reduction in process cost through predictive modeling.</li>
+
+                            <li>Completed certified Machine Learning capability training.</li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Red Cross -->
+
+            <div class="experience-card">
+
+                <img src="redcross.png" alt="Indian Red Cross Logo" class="logo">
+
+                <div class="content">
+
+                    <p class="role">
+                        IT Intern
+                    </p>
+
+                    <p class="company">
+                        Indian Red Cross Society | May 2019 – Jul 2019
+                    </p>
+
+                    <div class="description">
+
+                        <ul>
+
+                            <li>Developed a disaster communication application for emergency volunteer coordination.</li>
+
+                            <li>Integrated SMS broadcasting workflows for rapid outreach.</li>
+
+                            <li>Improved operational reach for volunteer response teams.</li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Somya Upadhyay. All rights reserved.</p>
+    </footer>
+
 </body>
+
 </html>
