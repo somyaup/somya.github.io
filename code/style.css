@@ -1,136 +1,6 @@
-/* =========================
+/* =========================================================
    GLOBAL RESET
-========================= */
-
-*{
-   margin:0;
-   padding:0;
-   box-sizing:border-box;
-}
-
-body{
-   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-   background: linear-gradient(135deg, #0f172a, #1e293b, #334155);
-   color:white;
-   min-height:100vh;
-   display:flex;
-   flex-direction:column;
-}
-
-header{
-   padding:20px 8%;
-}
-
-nav ul{
-   display:flex;
-   justify-content:flex-end;
-   gap:30px;
-   list-style:none;
-}
-
-nav a{
-   color:white;
-   text-decoration:none;
-   font-size:1rem;
-   transition:0.3s ease;
-   opacity:0.85;
-}
-
-nav a:hover{
-   opacity:1;
-   color:#38bdf8;
-}
-
-main{
-   flex:1;
-   display:flex;
-   flex-direction:column;
-   justify-content:center;
-   padding:0 8%;
-}
-
-.intro{
-   max-width:900px;
-}
-
-h1{
-   font-size:clamp(3rem, 8vw, 6rem);
-   font-weight:700;
-   line-height:1.1;
-   margin-bottom:20px;
-}
-
-.subtitle{
-   font-size:1.4rem;
-   color:#cbd5e1;
-   margin-bottom:25px;
-}
-
-.description{
-   font-size:1.1rem;
-   line-height:1.8;
-   color:#e2e8f0;
-   max-width:700px;
-   margin-bottom:40px;
-}
-
-.highlight{
-   color:#38bdf8;
-   font-weight:600;
-}
-
-.buttons{
-   display:flex;
-   gap:20px;
-   flex-wrap:wrap;
-}
-
-.btn{
-   padding:14px 28px;
-   border-radius:10px;
-   text-decoration:none;
-   font-weight:600;
-   transition:0.3s ease;
-}
-
-.primary-btn{
-   background:#38bdf8;
-   color:#0f172a;
-}
-
-.primary-btn:hover{
-   background:#0ea5e9;
-   transform:translateY(-2px);
-}
-
-.secondary-btn{
-   border:1px solid #94a3b8;
-   color:white;
-}
-
-.secondary-btn:hover{
-   border-color:#38bdf8;
-   color:#38bdf8;
-}
-
-footer{
-   text-align:center;
-   padding:20px;
-   color:#cbd5e1;
-   font-size:0.9rem;
-}
-
-@media(max-width:768px){
-   nav ul{
-       justify-content:center;
-       gap:18px;
-       flex-wrap:wrap;
-   }
-
-   .description{
-       font-size:1rem;
-   }
-}
+========================================================= */
 
 *{
     margin:0;
@@ -138,9 +8,9 @@ footer{
     box-sizing:border-box;
 }
 
-/* =========================
+/* =========================================================
    BODY
-========================= */
+========================================================= */
 
 body{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -149,11 +19,13 @@ body{
     overflow-x:hidden;
     min-height:100vh;
     position:relative;
+    display:flex;
+    flex-direction:column;
 }
 
-/* =========================
+/* =========================================================
    ANIMATED BACKGROUND
-========================= */
+========================================================= */
 
 body::before{
     content:"";
@@ -168,14 +40,14 @@ body::before{
 
     background-size:200% 200%;
 
-    animation: gradientMove 18s ease infinite;
+    animation:gradientMove 18s ease infinite;
 
     z-index:-3;
 }
 
-/* =========================
+/* =========================================================
    GRID OVERLAY
-========================= */
+========================================================= */
 
 body::after{
     content:"";
@@ -188,36 +60,36 @@ body::after{
 
     background-size:40px 40px;
 
-    mask-image: radial-gradient(circle at center, black 40%, transparent 90%);
-    -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 90%);
+    mask-image:radial-gradient(circle at center, black 40%, transparent 90%);
+    -webkit-mask-image:radial-gradient(circle at center, black 40%, transparent 90%);
 
     z-index:-2;
 }
 
-/* =========================
-   FLOATING BLUR ORBS
-========================= */
+/* =========================================================
+   FLOATING ORBS
+========================================================= */
 
 .blur-orb{
     position:fixed;
     border-radius:50%;
-    filter:blur(80px);
-    opacity:0.25;
+    filter:blur(90px);
+    opacity:0.22;
     z-index:-1;
-    animation: float 12s ease-in-out infinite;
+    animation:float 12s ease-in-out infinite;
 }
 
 .orb1{
-    width:300px;
-    height:300px;
+    width:320px;
+    height:320px;
     background:#38bdf8;
     top:10%;
     left:5%;
 }
 
 .orb2{
-    width:250px;
-    height:250px;
+    width:260px;
+    height:260px;
     background:#8b5cf6;
     bottom:10%;
     right:10%;
@@ -225,61 +97,40 @@ body::after{
 }
 
 .orb3{
-    width:200px;
-    height:200px;
+    width:220px;
+    height:220px;
     background:#0ea5e9;
     bottom:25%;
     left:35%;
     animation-delay:8s;
 }
 
-/* =========================
-   GLASS EFFECT CARDS
-========================= */
-
-.glass-card{
-    background:rgba(255,255,255,0.05);
-    border:1px solid rgba(255,255,255,0.08);
-    backdrop-filter:blur(14px);
-    -webkit-backdrop-filter:blur(14px);
-
-    border-radius:20px;
-
-    box-shadow:
-        0 8px 32px rgba(0,0,0,0.25);
-
-    transition:0.3s ease;
-}
-
-.glass-card:hover{
-    transform:translateY(-4px);
-
-    border-color:rgba(56,189,248,0.35);
-
-    box-shadow:
-        0 12px 40px rgba(56,189,248,0.12);
-}
-
-/* =========================
-   NAVBAR
-========================= */
+/* =========================================================
+   HEADER / NAVBAR
+========================================================= */
 
 header{
-    padding:20px 8%;
+    padding:24px 8%;
+    position:relative;
+    z-index:10;
 }
 
 nav ul{
     display:flex;
     justify-content:flex-end;
+    align-items:center;
     gap:28px;
     list-style:none;
+    flex-wrap:wrap;
 }
 
 nav a{
     color:white;
     text-decoration:none;
+    font-size:1rem;
     opacity:0.85;
     transition:0.3s ease;
+    position:relative;
 }
 
 nav a:hover{
@@ -287,28 +138,94 @@ nav a:hover{
     opacity:1;
 }
 
-/* =========================
+nav a.active{
+    color:#38bdf8;
+    font-weight:600;
+}
+
+/* =========================================================
+   MAIN LAYOUT
+========================================================= */
+
+main{
+    flex:1;
+    padding:60px 8%;
+    position:relative;
+    z-index:1;
+}
+
+/* =========================================================
+   HOMEPAGE LAYOUT
+========================================================= */
+
+.home-main{
+    min-height:80vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.intro{
+    max-width:900px;
+}
+
+/* =========================================================
    TYPOGRAPHY
-========================= */
+========================================================= */
 
 h1{
     font-size:clamp(3rem, 8vw, 6rem);
     font-weight:700;
+    line-height:1.1;
     letter-spacing:-2px;
+    margin-bottom:18px;
+}
+
+h2{
+    font-size:1.5rem;
+    margin-bottom:18px;
+    color:#38bdf8;
 }
 
 .subtitle{
+    font-size:1.2rem;
     color:#cbd5e1;
+    margin-bottom:28px;
     line-height:1.7;
 }
 
-/* =========================
+.description{
+    font-size:1.08rem;
+    line-height:1.9;
+    color:#e2e8f0;
+    max-width:760px;
+    margin-bottom:40px;
+}
+
+.highlight{
+    color:#38bdf8;
+    font-weight:600;
+}
+
+p{
+    line-height:1.8;
+    color:#e2e8f0;
+}
+
+/* =========================================================
    BUTTONS
-========================= */
+========================================================= */
+
+.buttons{
+    display:flex;
+    gap:18px;
+    flex-wrap:wrap;
+}
 
 .btn{
     display:inline-block;
-    padding:14px 26px;
+    padding:14px 28px;
     border-radius:12px;
     text-decoration:none;
     font-weight:600;
@@ -321,8 +238,8 @@ h1{
 }
 
 .primary-btn:hover{
-    transform:translateY(-2px);
     background:#0ea5e9;
+    transform:translateY(-2px);
 }
 
 .secondary-btn{
@@ -335,9 +252,182 @@ h1{
     color:#38bdf8;
 }
 
-/* =========================
+/* =========================================================
+   CARD STYLING
+========================================================= */
+
+.glass-card,
+.experience-card,
+.skill-card,
+.edu-card,
+.contact-card{
+
+    background:rgba(255,255,255,0.05);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+
+    border-radius:22px;
+
+    box-shadow:
+        0 8px 32px rgba(0,0,0,0.25);
+
+    transition:0.3s ease;
+}
+
+.glass-card:hover,
+.experience-card:hover,
+.skill-card:hover,
+.edu-card:hover,
+.contact-card:hover{
+
+    transform:translateY(-4px);
+
+    border-color:rgba(56,189,248,0.35);
+
+    box-shadow:
+        0 12px 40px rgba(56,189,248,0.12);
+}
+
+/* =========================================================
+   EXPERIENCE / EDUCATION CARDS
+========================================================= */
+
+.experience-container,
+.education-container{
+    display:flex;
+    flex-direction:column;
+    gap:28px;
+}
+
+.experience-card,
+.edu-card{
+    display:flex;
+    gap:24px;
+    align-items:flex-start;
+    padding:32px;
+}
+
+.logo{
+    width:85px;
+    height:85px;
+    object-fit:contain;
+    background:white;
+    border-radius:14px;
+    padding:8px;
+    flex-shrink:0;
+}
+
+.content,
+.edu-content{
+    flex:1;
+}
+
+.role,
+.degree{
+    font-size:1.4rem;
+    font-weight:700;
+    color:#38bdf8;
+    margin-bottom:10px;
+}
+
+.company,
+.college{
+    color:#cbd5e1;
+    margin-bottom:18px;
+}
+
+/* =========================================================
+   SKILLS GRID
+========================================================= */
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+    gap:28px;
+}
+
+.skill-card{
+    padding:30px;
+}
+
+.skill-card ul{
+    padding-left:22px;
+    line-height:1.9;
+}
+
+.skill-card li{
+    margin-bottom:8px;
+}
+
+/* =========================================================
+   CONTACT PAGE
+========================================================= */
+
+.contact-wrapper{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.contact-card{
+    width:100%;
+    max-width:720px;
+    padding:42px;
+}
+
+.contact-section{
+    margin-bottom:32px;
+}
+
+.social-links{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.social-links a{
+    color:#e2e8f0;
+    text-decoration:none;
+    transition:0.3s ease;
+}
+
+.social-links a:hover{
+    color:#38bdf8;
+}
+
+/* =========================================================
+   LISTS
+========================================================= */
+
+ul{
+    padding-left:22px;
+}
+
+li{
+    margin-bottom:10px;
+    line-height:1.8;
+    color:#e2e8f0;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+    text-align:center;
+    padding:24px;
+    color:#94a3b8;
+    font-size:0.92rem;
+    position:relative;
+    z-index:1;
+}
+
+/* =========================================================
    ANIMATIONS
-========================= */
+========================================================= */
 
 @keyframes gradientMove{
 
@@ -369,15 +459,50 @@ h1{
     }
 }
 
-/* =========================
-   MOBILE
-========================= */
+/* =========================================================
+   MOBILE RESPONSIVE
+========================================================= */
 
 @media(max-width:768px){
 
+    header{
+        padding:20px 6%;
+    }
+
+    main{
+        padding:40px 6%;
+    }
+
     nav ul{
         justify-content:center;
-        flex-wrap:wrap;
         gap:18px;
+    }
+
+    h1{
+        font-size:3rem;
+    }
+
+    .experience-card,
+    .edu-card{
+        flex-direction:column;
+        padding:24px;
+    }
+
+    .logo{
+        width:70px;
+        height:70px;
+    }
+
+    .skill-card{
+        padding:24px;
+    }
+
+    .contact-card{
+        padding:28px;
+    }
+
+    .buttons{
+        flex-direction:column;
+        align-items:flex-start;
     }
 }
