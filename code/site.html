@@ -1,26 +1,190 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Somya Upadhyay</title>
-	<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somya Upadhyay | Portfolio</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f172a, #1e293b, #334155);
+            color:white;
+            min-height:100vh;
+            display:flex;
+            flex-direction:column;
+        }
+
+        header{
+            padding:20px 8%;
+        }
+
+        nav ul{
+            display:flex;
+            justify-content:flex-end;
+            gap:30px;
+            list-style:none;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            font-size:1rem;
+            transition:0.3s ease;
+            opacity:0.85;
+        }
+
+        nav a:hover{
+            opacity:1;
+            color:#38bdf8;
+        }
+
+        main{
+            flex:1;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            padding:0 8%;
+        }
+
+        .intro{
+            max-width:900px;
+        }
+
+        h1{
+            font-size:clamp(3rem, 8vw, 6rem);
+            font-weight:700;
+            line-height:1.1;
+            margin-bottom:20px;
+        }
+
+        .subtitle{
+            font-size:1.4rem;
+            color:#cbd5e1;
+            margin-bottom:25px;
+        }
+
+        .description{
+            font-size:1.1rem;
+            line-height:1.8;
+            color:#e2e8f0;
+            max-width:700px;
+            margin-bottom:40px;
+        }
+
+        .highlight{
+            color:#38bdf8;
+            font-weight:600;
+        }
+
+        .buttons{
+            display:flex;
+            gap:20px;
+            flex-wrap:wrap;
+        }
+
+        .btn{
+            padding:14px 28px;
+            border-radius:10px;
+            text-decoration:none;
+            font-weight:600;
+            transition:0.3s ease;
+        }
+
+        .primary-btn{
+            background:#38bdf8;
+            color:#0f172a;
+        }
+
+        .primary-btn:hover{
+            background:#0ea5e9;
+            transform:translateY(-2px);
+        }
+
+        .secondary-btn{
+            border:1px solid #94a3b8;
+            color:white;
+        }
+
+        .secondary-btn:hover{
+            border-color:#38bdf8;
+            color:#38bdf8;
+        }
+
+        footer{
+            text-align:center;
+            padding:20px;
+            color:#cbd5e1;
+            font-size:0.9rem;
+        }
+
+        @media(max-width:768px){
+            nav ul{
+                justify-content:center;
+                gap:18px;
+                flex-wrap:wrap;
+            }
+
+            .description{
+                font-size:1rem;
+            }
+        }
+
+    </style>
 </head>
+
 <body>
-	<header>
-		<nav>
-			<ul>
-				<li><a href="index.html">Experience</a></li>
-				<li><a href="about.html">Education</a></li>
-				<li><a href="skills.html">Skills</a></li>
-				<li><a href="contact.html">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
-	<main>
-		<h1 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;color:white;font-size:8vw;" >Somya Upadhyay</h1>
-        <p style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;color:white;font-size:vw;">curriculum vitae</p>
-	</main>
-	<footer>
-		<p>Copyright &copy; 2023</p>
-	</footer>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Experience</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+
+            <p class="subtitle">MBA Candidate | Product & AI Consultant</p>
+
+            <h1>
+                Somya Upadhyay
+            </h1>
+
+            <p class="description">
+                MBA student at <span class="highlight">XLRI</span> with prior experience as an 
+                <span class="highlight">AI / ML Technical Lead</span> working across 
+                Product Management, Generative AI, analytics, and enterprise technology solutions.
+                Passionate about building scalable products that combine technology, strategy, and user impact.
+            </p>
+
+            <div class="buttons">
+                <a href="Somya_Upadhyay_CV.pdf" class="btn primary-btn">
+                    Download CV
+                </a>
+
+                <a href="contact.html" class="btn secondary-btn">
+                    Contact Me
+                </a>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Somya Upadhyay. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
