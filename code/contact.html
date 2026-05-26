@@ -1,56 +1,227 @@
+```html id="5c9r1t"
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-	<title>Contact Me @</title>
-	<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Somya Upadhyay</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f172a, #1e293b, #334155);
+            color:white;
+            min-height:100vh;
+            display:flex;
+            flex-direction:column;
+        }
+
+        header{
+            padding:20px 8%;
+        }
+
+        nav ul{
+            display:flex;
+            justify-content:flex-end;
+            gap:30px;
+            list-style:none;
+            flex-wrap:wrap;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            transition:0.3s ease;
+            opacity:0.85;
+        }
+
+        nav a:hover{
+            color:#38bdf8;
+            opacity:1;
+        }
+
+        .active{
+            color:#38bdf8;
+            font-weight:600;
+        }
+
+        main{
+            flex:1;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            padding:50px 8%;
+        }
+
+        .contact-card{
+            width:100%;
+            max-width:700px;
+            background:rgba(255,255,255,0.05);
+            border:1px solid rgba(255,255,255,0.08);
+            border-radius:24px;
+            padding:45px;
+            backdrop-filter: blur(10px);
+        }
+
+        h1{
+            font-size:clamp(2.5rem, 5vw, 4rem);
+            margin-bottom:12px;
+        }
+
+        .subtitle{
+            color:#cbd5e1;
+            margin-bottom:40px;
+            line-height:1.7;
+        }
+
+        .contact-section{
+            margin-bottom:35px;
+        }
+
+        .contact-section h2{
+            color:#38bdf8;
+            margin-bottom:14px;
+            font-size:1.2rem;
+        }
+
+        .contact-section p,
+        .contact-section a{
+            color:#e2e8f0;
+            line-height:1.8;
+            text-decoration:none;
+        }
+
+        .contact-section a:hover{
+            color:#38bdf8;
+        }
+
+        .email-button{
+            display:inline-block;
+            margin-top:12px;
+            padding:14px 24px;
+            background:#38bdf8;
+            color:#0f172a !important;
+            border-radius:10px;
+            font-weight:700;
+            transition:0.3s ease;
+        }
+
+        .email-button:hover{
+            background:#0ea5e9;
+            transform:translateY(-2px);
+        }
+
+        .social-links{
+            display:flex;
+            gap:20px;
+            flex-wrap:wrap;
+            margin-top:10px;
+        }
+
+        footer{
+            text-align:center;
+            padding:20px;
+            color:#cbd5e1;
+            font-size:0.9rem;
+        }
+
+        @media(max-width:768px){
+
+            nav ul{
+                justify-content:center;
+                gap:18px;
+            }
+
+            .contact-card{
+                padding:30px;
+            }
+        }
+
+    </style>
 </head>
+
 <body>
-	<header>
-		<nav>
-			<ul>
-				<li><a href="index.html">Experience</a></li>
-                <li><a href="about.html">Educaation</a></li>
-				<li><a href="skills.html">Skills</a></li>
-				<li><a style="color:gray;" href="../site.html">Back</a></li>
-			</ul>
-		</nav>
-	</header>
-	<main>
-		<h1 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;color:white;font-size:3vw;" >Somya Upadhyay</h1>
-        <body style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;color:white;font-size:1vw;">
-            <p style="font-size: 2vw;"><b>Contact @: </b></p>
-            <p><b>Adress:</b> </p>
-			<ul style="list-style-type:none;">
-				<li>Kadma</li>
-				<li>Jamshedpur-831005</li>
-				<li>India</li>
-			</ul>
-			<p><b>Mobile</b></p>
-			<ul style="list-style-type:none;">
-				<li>+91 8210859537</li>
-				<li>+91 9973641871 </li>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Experience</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a class="active" href="contact.html">Contact</a></li>
             </ul>
-            <p><b>Email:</b></p> 
-            <ul style="list-style-type:none;">
-				<li><a href="mailto:somya.upadhyay@hcl.com"> Official</a></li>
-                <li><a href="mailto:somyaupadyay@gmail.com"> Personal</a></li>
-			</ul>
-			<p><b>Links</b></p>
-			<ul style="list-style-type:none;">
-				<li><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/somya-upadyay"> Visit</a></li>
-				<li><b>GitHub:</b> <a href="https://github.com/somyaup"> Visit</a></li> 	
-				<li><b>Website:</b> <a href="https://somyaupadyay.wixsite.com/my-site-2/contact"> Visit</a></li>
-			</ul>
-			<p><b>Languages</b></p>
-			<ul style="list-style-type:none;">
-				<li><b>English:</b> Fluent</li>
-				<li><b>Hindi:</b> Native Speaker</li>	
-			</ul>
-            <p> ________________________________________________________________________</p>
-        </body>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="contact-card">
+
+            <h1>Contact</h1>
+
+            <p class="subtitle">
+                Open to conversations around Product Management, AI/ML, consulting, and technology-driven problem solving.
+            </p>
+
+            <div class="contact-section">
+
+                <h2>Email</h2>
+
+                <p>
+                    somyaupadyay@gmail.com
+                </p>
+
+                <a href="mailto:somyaupadyay@gmail.com" class="email-button">
+                    Send an Email
+                </a>
+
+            </div>
+
+            <!-- <div class="contact-section">
+
+                <h2>Phone</h2>
+
+                <p>
+                    +91 8210859537
+                </p>
+
+            </div> -->
+
+            <div class="contact-section">
+
+                <h2>Profiles</h2>
+
+                <div class="social-links">
+
+                    <a href="https://www.linkedin.com/in/somya-upadyay" target="_blank">
+                        LinkedIn
+                    </a>
+
+                    <a href="https://github.com/somyaup" target="_blank">
+                        GitHub
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
     </main>
-	<footer>
-		<p>Copyright &copy; 2023</p>
-	</footer>
+
+    <footer>
+        <p>© 2026 Somya Upadhyay. All rights reserved.</p>
+    </footer>
+
 </body>
+
 </html>
+```
